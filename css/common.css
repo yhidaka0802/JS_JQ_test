@@ -1,20 +1,17 @@
 @charset "UTF-8";
 
 body {
-  font-family: 'Noto Serif', serif;
-  font-size: 15px;
-  line-height: 1.8;
-
-  letter-spacing: 1px;
-  word-break: break-all;
-
   color: #333;
+  word-break: break-all;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-family: 'Noto Serif', serif;
+  line-height: 1.8;
 }
 
 a {
-  text-decoration: none;
-
   color: #333;
+  text-decoration: none;
 }
 
 li {
@@ -23,7 +20,6 @@ li {
 
 header {
   width: 100%;
-
   background-color: #fff;
 }
 
@@ -31,7 +27,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   height: 100px;
 }
 
@@ -57,33 +52,27 @@ header .nav_bar ul .respons {
 }
 
 header .nav_bar ul li {
-  height: 50px;
-  margin: 40px 16px 0;;
+  margin: 40px 16px 0;
+  height: 50px;;
 }
 
 header .nav_bar ul li a small {
-  font-size: 12px;
-  font-weight: 400;
-
   display: block;
   visibility: hidden;
-
   margin-top: 2px;
   padding-top: 6px;
-
-  text-align: center;
-
-  color: #5B8FAD;
   border-top: 3px solid #5B8FAD;
+  color: #5B8FAD;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 header .nav_bar ul li a {
-  font-size: 24px;
-  font-weight: bold;
-
   padding: 8px 0px;
-
   color: #606060;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 header .nav_bar ul li a:hover {
@@ -92,7 +81,6 @@ header .nav_bar ul li a:hover {
 
 header .nav_bar ul li a:hover small {
   visibility: visible;
-
   border-top: 2px solid #5B8FAD;
 }
 
@@ -107,28 +95,23 @@ header .drawer {
 
 .top_bg {
   position: relative;
-
+  min-height: 680px;
   width: 100%;
   height: 70vh;
-  min-height: 680px;
-
   background: url("../img/top.jpg") no-repeat center;
   background-position: 70% 80%;
   background-size: cover;
 }
 
 .top .top_img {
-  font-size: 22px;
-
   position: absolute;
-  z-index: 3;
   top: 30%;
   left: 8%;
-
+  z-index: 3;
   width: 880px;
   height: auto;
-
   color: rgb(180, 180, 180);
+  font-size: 22px;
 }
 
 .top .top_img .subtext {
@@ -143,30 +126,24 @@ header .drawer {
 .section .section_ttl {
   margin-top: 200px;
   margin-bottom: 50px;
-
   text-align: center;
 }
 
 .section .section_ttl h2 {
-  font-size: 50px;
-
   display: inline-block;
-
   color: #5B8FAD;
+  font-size: 50px;
 }
 
 .section .section_ttl small {
-  font-size: 28px;
-
   display: block;
-
   border-top: 2px solid #5B8FAD;
+  font-size: 28px;
 }
 
 .arrow {
   margin-top: 50px;
   margin-right: 100px;
-
   text-align: right;
 }
 
@@ -178,23 +155,21 @@ header .drawer {
   display: flex;
   align-items: center;
   justify-content: right;
-
+  margin-bottom: 28px;
   width: 100%;
   height: 160px;
-  margin-bottom: 28px;
-
   background-color: #fff;
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
 }
 
 .service_item .service_item_img {
-  width: 25%;
   padding-left: 16px;
+  width: 25%;
 }
 
 .service_item .service_item_img {
-  width: 25%;
   padding-left: 16px;
+  width: 25%;
 }
 
 .service_item .service_item_img img {
@@ -203,8 +178,8 @@ header .drawer {
 }
 
 .service_wrap .service_item p {
-  width: 65%;
   margin-left: 30px;
+  width: 65%;
   font-size: 20px;
   line-height: 1.8em;
 }
@@ -216,10 +191,10 @@ footer {
 }
 
 .footer_logo {
-  width: 15%;
-  height: auto;
   margin: 0 auto;
   margin-bottom: 40px;
+  width: 15%;
+  height: auto;
 }
 
 .footer_logo img {
@@ -233,8 +208,8 @@ footer {
 }
 
 .footer_item {
-  padding-right: 28px;
   margin-right: 20px;
+  padding-right: 28px;
   border-right: solid 3px #5B8FAD;
   font-size: 18px;
   line-height: 1;
@@ -249,16 +224,16 @@ footer {
 }
 
 .footer_item:last-child {
-  padding-right: 0;
   margin-right: 0;
+  padding-right: 0;
   border-right: none;
 }
 
 .footer_sns {
-  margin-bottom: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .footer_sns .sns_icon1 {
@@ -281,4 +256,33 @@ footer {
   display: block;
   text-align: center;
   font-size: 15px;
+}
+
+.breadcrumb {
+  margin: 40px auto;
+  max-width: 90%;
+}
+
+.breadcrumb ul {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.breadcrumb li {
+  font-size: 20px;
+}
+
+.breadcrumb li::after {
+  padding-right: 10px;
+  content: ">";
+  font-size: 20px;
+}
+
+.breadcrumb li:last-child::after {
+  content: "";
+}
+
+.color {
+  color: #5B8FAD;
+  font-weight: 700;
 }

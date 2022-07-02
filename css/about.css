@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+.top .top_img {
+  width: 500px;
+  text-align: center;
+}
+
+.top_img h1 {
+  color: transparent;
+  font-size: 80px;
+  line-height: 1;
+
+  -webkit-text-stroke: 2px white;
+}
+
+.top_img p {
+  color: #e4a93b;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.about_com {
+  margin-bottom: 200px;
+  padding: 0 4%;
+}
+
+.about_com_all {
+  display: flex;
+  padding: 100px;
+  border: solid 2px #ddd;
+  -webkit-box-shadow: 20px 20px 30px #ddd;
+          box-shadow: 20px 20px 30px #ddd;
+}
+
+.about_com_list {
+  width: 50%;
+}
+
+.about_com_item {
+  margin-bottom: 40px;
+}
+
+.about_com_ttl {
+  display: inline-block;
+  padding-bottom: 8px;
+  font-size: 23px;
+}
+
+.about_com_txt {
+  display: inline-block;
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+
+.about_mem {
+  margin-bottom: 200px;
+}
+
+.about_mem .inner {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.about_mem_all {
+  display: flex;
+  padding: 100px;
+  border: solid 2px #ddd;
+  -webkit-box-shadow: 20px 20px 30px #ddd;
+  box-shadow: 20px 20px 30px #ddd;
+}
+
+.about_mem_per {
+  margin: 0 5%;
+  width: 50%;
+}
+
+.about_mem_ttl {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 23px;
+}
+
+.about_mem_ttl::before {
+  position: absolute;
+  top: 15%;
+  left: -3%;
+  width: 4px;
+  height: 30px;
+  background-color: #75a9ff;
+  content: "";
+}
+
+.about_mem_name {
+  margin-bottom: 35px;
+  font-size: 20px;
+}
+
+.about_mem_txt {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about_acc {
+  margin-bottom: 150px;
+  padding: 0 20px;
+}
+
+.about_acc_map {
+  width: 55%;
+  height: 350px;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 400%, 100% 0%);
+  clip-path: polygon(0% 0%, 0% 400%, 100% 0%);
+}
+
+.about_acc_map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.acc_wrap {
+  position: relative;
+}
+
+.about_acc_list {
+  position: absolute;
+  top: 0%;
+  left: 60%;
+}
+
+.about_acc_item {
+  margin-bottom: 40px;
+  line-height: 1.5em;
+}
+
+.about_acc_ttl {
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.about_acc_txt {
+  font-size: 20px;
+  line-height: 1.8;
+}
