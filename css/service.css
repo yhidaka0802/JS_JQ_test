@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+
+.top_img {
+  text-align: center;
+}
+
+.top_img h1 {
+  font-size: 80px;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  line-height: 1;
+  /* display: inline-block; */
+}
+
+.top_img p {
+  /* display: inline-block; */
+  color: #e4a93b;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1;
+}
+
+
