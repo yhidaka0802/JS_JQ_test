@@ -95,19 +95,19 @@ header .drawer {
 
 .top_bg {
   position: relative;
-  min-height: 680px;
+  /* min-height: 680px;
   width: 100%;
   height: 70vh;
   background: url("../img/top.jpg") no-repeat center;
   background-position: 70% 80%;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .top .top_img {
   position: absolute;
   top: 30%;
   left: 8%;
-  z-index: 3;
+  z-index: 20;
   width: 880px;
   height: auto;
   color: rgb(180, 180, 180);
@@ -285,4 +285,152 @@ footer {
 .color {
   color: #5B8FAD;
   font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 95%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 95%;
+  }
+
+  .header {
+    display: block;
+  }
+
+  .header .logo {
+    padding: 5px 0 0 5px;
+  }
+
+  .footer_logo {
+    width: 40%;
+  }
+
+  .footer_item {
+    margin-right: 7px;
+    padding-right: 7px;
+  }
+
+  header .drawer {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 100;
+    visibility: visible;
+    width: 24px;
+    border-top: solid 4px #aaaaaa;
+    cursor: pointer;
+  }
+
+  header .drawer::before, header .drawer::after {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 24px;
+    height: 4px;
+    background: #aaaaaa;
+    content: "";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  header .drawer::before {
+    top: 6px;
+  }
+
+  header .drawer::after {
+    top: 15px;
+  }
+
+  header .nav_bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #000;
+  }
+
+  header .nav_bar ul {
+    display: block;
+    text-align: center;
+    float: none;
+    top: 20%;
+  }
+
+  header .nav_bar ul li {
+    width: 40%;
+    margin: 0 auto 20px;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: solid 3px #75a9ff;
+  }
+
+  header .nav_bar ul li a {
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  header .respons {
+    visibility: visible;
+  }
+
+  body.nav-open header .drawer {
+    border-top: 0;
+  }
+
+  body.nav-open header .drawer::before {
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+
+  body.nav-open header .drawer::after {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+
+  .top .top_img {
+    width: 70%;
+  }
+
+  .top .top_img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .service_item {
+    width: 100%;
+    margin: 0 0 10%;
+    height: auto;
+  }
+
+  .btn {
+    background: #000;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .arrow {
+    width: 80%;
+  }
+
+  .arrow img {
+    width: 100%;
+  }
+
+  
+
+
 }

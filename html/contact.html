@@ -12,9 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/common2.css">
     <link rel="stylesheet" type="text/css" href="../css/contact.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">  
   </head>
   <body>
+    <div id="load-animation">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+      </div>
+    </div>
     <header>
       <div class="header_all">
         <a href="../index.html" class="logo">
@@ -33,8 +44,13 @@
       <p class="drawer"></p>
     </header>
     <main>
-      <section class="top">
+      <section class="top" id="top">
         <div class="top_bg">
+          <ul class="slideShow">
+            <li class="slide slide_img1"></li>
+            <li class="slide slide_img2"></li>
+            <li class="slide slide_img3"></li>
+          </ul>
           <div class="top_img">
             <h1>CONTACT</h1>
             <p>お問い合わせ</p>
@@ -51,6 +67,7 @@
           </li>
         </ul>
       </section>
+      <p id="page-top"><a href="#">Page Top</a></p>
       <section class="contact section">
         <div class="inner">
           <div class="section_ttl">
@@ -61,7 +78,7 @@
               弊社にご興味/関心を頂き、誠に有難うございます。制作/運用料金などの見積もり、サービスに関するご相談など、気軽にお問い合わせ下さい。弊社の担当者が内容の確認後、ご連絡させて頂きます。下記よりお問い合わせ項目を記入下さい。
             </p>
           </div>
-          <form action="#" class="contact_form" id="form">
+          <form action="mail.php" class="contact_form" id="form" method="post">
             <div class="contact_box">
               <label for="name" class="contact_form_ttl">お問い合わせ項目</label>
               <select name="subject" class="contact_form_box1" required="required">
@@ -119,6 +136,7 @@
       <small class="footer_txt">©CODESTAR All Right Reserved.</small>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
   </body>
 </html>

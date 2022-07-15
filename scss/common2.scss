@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+
+  .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+      animation: sk-foldCubeAngle 2.4s infinite linear both;
+      -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+  }
+
+  .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+
+    &::before {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+  }
+
+  .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+
+    &::before {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+    }
+  }
+
+  .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+
+    &::before {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+  }
+}
+
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+#load-animation {
+  width: 100%;
+  height: 100%;
+  background: #5b8fad;
+  align-items: center;
+  transition: all 2.4s;
+  display: flex;
+  // flexで縦方向も中央へ移動
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#top {
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 30px;
+}
+
+.slideShow {
+  position: relative;
+  z-index: 1;
+
+  .slide_img1 {
+    background: url("/img/top.jpg");
+  }
+  .slide_img2 {
+    background: url("/img/news.png");
+  }
+  .slide_img3 {
+    background: url("/img/feature1.jpg");
+  }
+
+  .slide {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.slick {
+  &_prev, &_next {
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+  }
+
+  &_prev {
+    left: 2.5%;
+    transform: rotate(-135deg);
+  }
+
+  &_next {
+    right: 2.5%;
+    transform: rotate(45deg);
+  }
+
+  &-dots {
+    margin: -80px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+
+    li {
+      margin: 0 5px;
+      display: inline-block;
+    }
+
+    button {
+      color: transparent;
+      background: #fff;
+      border-radius: 50%;
+      outline: none;
+      display: block;
+    }
+
+    .slick-active button {
+      background: #fff;
+    }
+  }
+}
+
+.fadeUp {
+  animation: fadeUpAnime 0.8s forwards;
+  opacity: 0;
+}
+.fadeLeft {
+  animation: fadeLeftAnime 0.8s forwards;
+  opacity: 0;
+  overflow: hidden;
+}
+.fadeRight {
+  animation: fadeRightAnime 0.8s forwards;
+  opacity: 0;
+  overflow: hidden;
+}
+.blur {
+  animation: blurAnime 1s forwards;
+}
+
+.fadeUpTrigger, .fadeLeftTrigger, .fadeRightTrigger .blurTrigger{
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
+
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  opacity: 0;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #942D2F;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+    
+    &:hover {
+      background: #777;
+    }
+  }  
+}
+
+.UpMove {
+  animation: UpAnime 0.5s forwards;
+  opacity: 0;
+}
+
+.DownMove {
+  animation: DownAnime 0.5s forwards;
+  opacity: 0;
+}
+
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
